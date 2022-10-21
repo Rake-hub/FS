@@ -1,0 +1,226 @@
+/* General */
+
+.greenButton {
+    background-color: #2A5B45;
+}
+
+.green {
+    color: #2A5B45;
+}
+
+.white{
+    color: white;
+}
+
+.alignDiv {
+    display: flex;
+    text-align: center;
+    flex-direction: row;
+    justify-content: center;
+}
+
+/* --------------------------------------- */
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+    position: relative;
+    padding: 12px 40px;
+    gap: 2%;
+    width: auto;
+    height: 64px;
+    background: #2B2A2B;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.03);
+}
+
+nav * {
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+    color: white;
+}
+
+nav div {
+    display: inline-block;
+    text-align: center;
+    padding-top: 0.5%;
+}
+
+nav .carr {
+    margin-top: 20%;
+    width: auto;
+    height: 70%;
+}
+
+nav span {
+    font-size: large;
+}
+
+/* --------------------------------------- */
+
+.s1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 48px 40px;
+    gap: 8px;
+
+    width: auto;
+    height: 486px;
+
+    background: rgba(227, 222, 215, 0.3);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.s1 .centered {
+    padding-top: 5%;
+}
+
+/* --------------------------------------- */
+
+.s2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 48px 147px;
+    gap: 24px;
+
+    width: auto;
+    height: 420px;
+
+    /* background: rgba(227, 222, 215, 0.3) */
+    background: rgba(227, 222, 215, 0.3) url(Images_coffeeShop/vasodecafe.png) center center;
+    background-size: inherit 380px;
+    background-repeat: no-repeat;
+}
+
+.s2 .caja {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+
+    text-align: center;
+    size: 996px 232px;
+    padding-top: 25px;
+}
+
+.s2 .caja h4 {
+    color: white;
+    text-size-adjust: bold;
+}
+
+.s2 .caja>div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.s2 .cajita {
+    background-color: white;
+    border-radius: 1em;
+    margin: 1em;
+    padding: 1em;
+}
+
+
+/* --------------------------------------- */
+
+
+.s3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    gap: 40px;
+    margin-bottom: 30px;
+
+    width: auto;
+    height: 603.39px;
+}
+
+.s3 .caja {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.s3 .caja>div {
+    margin: 1em;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.s3 .bott {
+    padding-bottom: 20px;
+}
+
+
+.s3 a {
+    /* text-decoration: none; */
+    color: black;
+}
+
+/* .top a:hover {
+    text-decoration: underline;
+    color: black;
+}
+
+.top a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+.top a:active {
+    color: black;
+} */
+
+/* --------------------------------------- */
+
+.s4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 48px 386px;
+    gap: 24px;
+    text-align: center;
+
+    width: auto;
+    height: 804px;
+
+    background: #2A5B45;
+}
+
+.s4 div>div {
+    background-color: white;
+    border-radius: 1em;
+    margin: 1em;
+    padding: 1em;
+    padding-left: 1,5em;
+    padding-right: 1,5em;
+}
+
+.s4 a{
+    color: white;
+}
+
+
+.s4 div>div>div {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content:space-between;
+    margin: 0%;
+
+    /* margin: 10em; */
+}
+
+/* --------------------------------------- */
