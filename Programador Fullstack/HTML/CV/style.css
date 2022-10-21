@@ -1,0 +1,47 @@
+ body{
+    font-size: larger;
+} 
+
+.izqb{
+    background-color: rgb(148, 95, 148);
+    color: #fff;
+    align-content: center;
+}
+
+.purple{
+    color: rgb(148, 95, 148);
+}
+
+
+h2 {
+    width: 650px; 
+    text-align: left; 
+    border-bottom: 2px  solid grey; 
+    line-height: 0.1em;
+    margin: 10px 0 20px; 
+ } 
+ 
+ h2 span { 
+     background:#fff; 
+     padding:0 10px; 
+ }
+
+
+/* -----------    IZQ    --------------- */   
+
+.img {
+    border-radius: 90%;
+  }
+
+  .h2 {
+    width: 650px; 
+    text-align: left; 
+    border-bottom: 2px  solid grey; 
+    line-height: 0.1em;
+    margin: 10px 0 20px; 
+ } 
+ 
+ .h2_span { 
+     background:#fff; 
+     padding:0 10px; 
+ }  

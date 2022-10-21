@@ -1,0 +1,167 @@
+*{
+    margin: 1em;
+    padding: 1em;
+    border-radius: 1em;
+    color: black;
+}
+
+.nojump{
+    display:inline;
+}
+
+#container{
+    width: 1200px;
+    height: 1000px;
+    background-color: cadetblue;
+    margin: 0.5em auto;
+    padding: 0.5em;    
+    border-radius: 0;
+    background-image: url(../../Images/Avatar2.jpg);
+    background-size: 1200px 1000px;
+}
+
+#header{
+    height: 15%;
+    background-color: lightgray;
+    background-image: url(../../Images/black_adam_2.jpg);
+    background-size: 1200px 200px;
+    background-repeat: no-repeat;
+}
+
+#nav{
+    height: 10%;
+    background-color: teal;
+}
+
+#nav ul{
+    list-style: none;
+}
+
+#nav li{
+    display: inline;
+    margin: 0em;
+    padding: 1em;
+}
+
+#nav button{
+    color: rgb(60, 60, 199);
+    font-size: large;
+}
+
+#nav .button_blue{
+    color: white;
+    font-size: large;
+}
+
+#content{
+    height: 58%;
+    background-color: darkslategray;
+    border-radius: 0;
+    /* display: inline-block; */
+}
+
+#section{
+    height: 95%;
+    width: 63%;
+    background-color: gainsboro;
+    float: left;
+    position: relative;
+    color: black;
+}
+
+#section article{
+    position: inherit;
+    background-color: aquamarine;
+    color: black;
+    height: 30%;
+    margin: 0.5em;
+    padding: 0.5em;
+}
+
+#section *{
+    position: inherit;
+    color: black;
+    margin: 0em;
+    padding: 0em;
+}
+
+#section article img{
+    height: auto;
+    width: 10%;
+    float: left;
+    margin: 1em;
+}
+
+#section a{
+    color: black;
+    text-decoration: none;
+    padding: 0em;
+}
+
+#section a:hover{
+    color: darkblue;
+    text-decoration: underline;
+}
+
+
+
+#aside{
+    height: 95%;
+    width: 30%;
+    float: right;
+    position: inherit;
+    background-color: lightblue;
+}
+
+#aside *{
+    color: black;
+    margin: 0;
+    padding: 0;
+}
+
+#aside img{
+    width: auto;
+    height: 30%;
+    margin: 1em;  
+}
+
+#aside a{
+    color: red;
+    border: 2px solid red;
+    border-radius: 0%;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+
+#footer{
+    height: 10%;
+    background-color: lightslategrey;
+}
+
+#footer *{
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+#footer a{
+    color: black;
+    text-decoration: none;
+    padding: 2em;
+}
+
+#footer a:hover{
+    color: purple;
+    text-decoration: underline;
+}
+
+.espacio_izq{
+    width: 250px;
+    height: 10px;
+    display: inline-block; 
+    /* background-color: green;
+     border: 1px solid black;  */
+}
+
+

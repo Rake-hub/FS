@@ -1,0 +1,47 @@
+ body{
+    background-color: rgb(100, 92, 92);
+    background-image: url("../../Images/mar-blanco.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+} 
+
+.img{
+    position: absolute;
+    top: 200px;
+    left: 600px;
+
+    width: 300px;
+    height: 200px;
+    z-index: 1;
+}
+
+.img2{
+    position: absolute;
+    top: 300px;
+    left: 700px;
+
+    width: 200px;
+    height: 300px;
+    z-index: 3;
+}
+
+.ul{
+    list-style-image: url(../../Images/apple-blue_81601.png);
+    background-position: center;
+    position: center;
+    background-color: aquamarine;
+    max-width: 100px;
+
+
+}
+
+.purple{
+    background-color: blueviolet;
+    width: 200px;
+    height: 500px;
+
+    position: absolute;
+    top: 200px;
+    left: 900px;
+}
