@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="http://www.google.com/s2/favicons?domain=www.google.com">
+  <title>Index</title>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <!-- Javascript function -->
+  <script>
+    function pasarTexto (){
+      document.miform.caja2.value=document.miform.caja1.value;
+      document.miform.caja1.value="";
+    }
+  </script>
+</head>
+
+<body>
+
+  <br><br>
+
+  <form action="" name="miform" >
+    <input type="text" name="caja1">
+    <button onclick="pasarTexto()" type="button">Pasar texto</button>
+    <input type="text" name="caja2">
+  </form>
+
+
+  <script src="script.js"></script>
+</body>
+
+</html>
