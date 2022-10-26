@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="http://www.google.com/s2/favicons?domain=www.google.com">
+  <title>Index</title>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <!-- Javascript function -->
+</head>
+
+<body>
+
+  <script>
+
+    document.write("<p>Hoy es Miércoles</p>")
+    document.write("<ul><li>Lunes</li><li>Martes</li><li>Miercoles</li></ul>")
+
+    // document.write("<h1>a</h1><h2>b</h2><h3>c</h3><h4>d</h4><h5>e</h5><h6>f</h6>")
+    for (let i = 1; i < 7; i++)     document.write(`<h${i}>Título ${i}</h${i}>`);
+
+
+    //bucle for doble
+    var tamano=Number(prompt("Tamaño"));
+
+    for(let i=1;i<=tamano;i++){
+        for(let j=1;j<=tamano;j++){
+            if ((i==j)||((i+j)==tamano+1)) document.write("<font color='red'>1</font>")
+            else document.write("0") //&nbsp;
+        } 
+        document.write("<br>")
+    }
+
+
+  </script>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

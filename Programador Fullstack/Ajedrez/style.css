@@ -1,0 +1,24 @@
+ body{
+    background-color: rgb(94, 94, 94);
+ }
+ 
+ .tabla{
+    display: inline-flex;
+    justify-content: center;
+    margin-top: 0.5%;
+    border: 2em solid rgb(14, 14, 14);
+} 
+
+div{
+    display: flex;
+    justify-content: center;
+}
+
+
+/* .tabla{
+    display: inline-flex;
+    justify-content: center;
+    margin-top: 0.5%;
+    margin-left: 29%;
+    border: 2em solid rgb(14, 14, 14);
+}  */
