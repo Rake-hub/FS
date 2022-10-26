@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="http://www.google.com/s2/favicons?domain=www.google.com">
+  <title>Index</title>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <!-- Javascript function -->
+
+  <script>
+    //Tambien se puede hacer con booleanos
+    var cont = 0;
+    function cambiar() {   
+      if ((cont % 2) == 0) document.images[0].src = '../../Images/apple-blue_81601.png';
+      else document.images[0].src = '../../Images/balon.jpg';
+      cont++;
+    }
+  </script>
+</head>
+
+<body>
+
+
+  <img src="../../Images/balon.jpg" alt="" width="200" height="200" id="img1">
+
+  <br><br><br>
+  <button onclick="cambiar()">Cambiar</button>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -15,8 +15,8 @@ function Ajedrez() {
         document.write("<tr> ")
         for (let j = 1; j <= 8; j++) {
             if ((i + j) % 2 == 0)
-                document.write(`<td align='center' id='td${i}${j}' bgcolor='313131' width='70' height='70'></td>`) //style='padding:10px'
-            else document.write(`<td align='center' id='td${i}${j}' bgcolor='white' width='70' height='70'></td>`)
+                document.write(`<td align='center' id='td${i}${j}' bgcolor='white' width='70' height='70'></td>`) //style='padding:10px'
+            else document.write(`<td align='center' id='td${i}${j}' bgcolor='313131' width='70' height='70'></td>`)
             // bgcolor='EEE8C9'
         }
         document.write("</tr>")
