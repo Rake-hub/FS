@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="http://www.google.com/s2/favicons?domain=www.google.com">
+  <title>Index</title>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <!-- Javascript function -->
+
+  <script>
+
+
+
+    let jugar = () => {
+      for (let i = 0; i < 6; i++) {
+        let j = Math.round(Math.random() * (6 - 1) + 1);
+        document.images[i].src = `../../Images/dado${j}.png`;
+      }
+    }
+
+    let ordenar = () => {
+      let j=1;
+      for (let i = 0; i < 6; i++) {
+        document.images[i].src = `../../Images/dado${j}.png`;
+        j++;
+      }
+    }
+
+    let ordenar_reves = () => {
+      let j=6;
+      for (let i = 0; i < 6; i++) {
+        document.images[i].src = `../../Images/dado${j}.png`;
+        j--;
+      }
+    }
+
+    // function jugar() {   
+    //    let j=Math.round(Math.random()*(6-1)+1);
+    //   // let j=Math.ceil(Math.random()*6);
+    //   document.images[0].src = `../../Images/dado${j}.png`;
+    // }
+
+
+  </script>
+</head>
+
+<body>
+
+  <div>
+    <img src="../../Images/dado1.png" alt="" width="200" height="200" id="img1" style="visibility:visible">
+    <img src="../../Images/dado2.png" alt="" width="200" height="200" id="img2" style="visibility:visible">
+    <img src="../../Images/dado3.png" alt="" width="200" height="200" id="img3" style="visibility:visible">
+    <img src="../../Images/dado4.png" alt="" width="200" height="200" id="img4" style="visibility:visible">
+    <img src="../../Images/dado5.png" alt="" width="200" height="200" id="img5" style="visibility:visible">
+    <img src="../../Images/dado6.png" alt="" width="200" height="200" id="img6" style="visibility:visible">
+  </div>
+
+  <br><br><br>
+  <button onclick="jugar()">Jugar</button>
+  <button onclick="ordenar()">Ordenar</button>
+  <button onclick="ordenar_reves()">Ordenar al reves</button>
+
+
+  <script src="script.js"></script>
+</body>
+
+</html>

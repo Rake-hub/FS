@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="http://www.google.com/s2/favicons?domain=www.google.com">
+  <title>Index</title>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <!-- Javascript function -->
+
+  <script>
+
+    function cambiar() {   
+      document.images[0].src=(document.images[0].src=='http://127.0.0.1:5500/Images/balon.jpg')? '../../Images/men.jpg': '../../Images/balon.jpg';
+    }
+
+
+    function ocultar(){
+      document.images[0].style.visibility=(document.images[0].style.visibility=='visible')? 'hidden':'visible';
+    }
+  </script>
+</head>
+
+<body>
+
+
+  <img src="../../Images/balon.jpg" alt="" width="200" height="200" id="img1" style="visibility:visible">
+
+  <br><br><br>
+  <button onclick="cambiar()">Cambiar</button>
+  <button onclick="ocultar()">Ocultar</button>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

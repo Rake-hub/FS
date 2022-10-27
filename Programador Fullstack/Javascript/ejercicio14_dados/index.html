@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="http://www.google.com/s2/favicons?domain=www.google.com">
+  <title>Index</title>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <!-- Javascript function -->
+
+  <script>
+
+    
+
+    let jugar=()=>{   
+       let j=Math.round(Math.random()*(6-1)+1);
+      // let j=Math.ceil(Math.random()*6);
+      document.images[0].src = `../../Images/dado${j}.png`;
+    }
+
+  </script>
+</head>
+
+<body>
+
+
+  <img src="../../Images/dado1.png" alt="" width="200" height="200" id="img1" style="visibility:visible">
+
+  <br><br><br>
+  <button onclick="jugar()">Jugar</button>
+
+
+  <script src="script.js"></script>
+</body>
+
+</html>

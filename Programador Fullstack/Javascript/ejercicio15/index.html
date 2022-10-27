@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="http://www.google.com/s2/favicons?domain=www.google.com">
+  <title>Index</title>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <!-- Javascript function -->
+
+  <script>
+
+    var pos = 2;
+
+    let izquierda = () => {
+      if ((pos > 1) && (pos <= 5)) {
+        pos--;
+        document.images[1].src = `../../Images/${pos}.png`;
+      }
+      else pos = 1;
+    }
+
+    let derecha = () => {
+      if ((pos >= 1) && (pos < 5)) {
+        pos++;
+        document.images[1].src = `../../Images/${pos}.png`;
+      }
+      else pos = 5;
+    }
+
+
+  </script>
+</head>
+
+<body>
+
+  <div class="div">
+    <img src="../../Images/izquierda.png" alt="" width="200" height="200" id="img1" style="visibility:visible"
+      onclick="izquierda()">
+    <img src="../../Images/2.png" alt="" width="300" height="500" id="img1" style="visibility:visible">
+    <img src="../../Images/derecha.png" alt="" width="200" height="200" id="img1" style="visibility:visible"
+      onclick="derecha()">
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
