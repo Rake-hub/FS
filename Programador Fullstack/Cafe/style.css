@@ -242,3 +242,86 @@ order: 5;
 align-self: stretch;
 flex-grow: 0;
 }
+
+.s5>div{
+    display: flex;
+    flex-direction: row;
+}
+
+.s5 .cuadrado{
+    display: flex;
+    flex-direction: column;
+    align-items: left; 
+    border-radius: 1em;
+    margin: 1em;
+    margin-top: 10em;
+    margin-left: 5em;
+    padding: 1em;
+    padding-left: 1,5em;
+    padding-right: 1,5em;
+
+}
+
+.s5 .cuadrado>div{
+    display: flex;
+    flex-direction: row;
+}
+
+.s5 .imgG{
+    width:588px;
+    height:420px;
+    border-radius: 2em;
+    margin: 1em;
+    padding: 1em;
+    padding-left: 1,5em;
+    padding-right: 1,5em;
+}
+
+/* --------------------------------------- */
+
+.s6{
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 0px;
+
+width: auto;
+height: 552px;
+
+/* Taupe */
+background: #E3DED7;
+
+/* Inside auto layout */
+flex: none;
+order: 6;
+align-self: stretch;
+flex-grow: 0;
+}
+
+.s6 .d1{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: left;
+margin-right: 5em;
+}
+
+.s6 a{
+    color: black;
+}
+
+.s6 .d2{
+    width: 688px;
+    height: 552px;
+    background-color: white;
+    margin: 1em;
+    padding: 1em;
+    padding-left: 1,5em;
+    padding-right: 1,5em;
+}
+
+.s6 input{
+    width: 80%;
+    border-radius: 10px;
+}
