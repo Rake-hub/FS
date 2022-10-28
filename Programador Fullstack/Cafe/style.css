@@ -224,3 +224,21 @@ nav span {
 }
 
 /* --------------------------------------- */
+
+.s5 a {
+    color: black;
+}
+
+.s5{
+width: auto;
+height: 480px;
+
+/* Off white */
+background: #F7F5F3;
+
+/* Inside auto layout */
+flex: none;
+order: 5;
+align-self: stretch;
+flex-grow: 0;
+}
