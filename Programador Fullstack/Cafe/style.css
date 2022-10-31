@@ -19,6 +19,15 @@
     justify-content: center;
 }
 
+.row{
+    display: flex;
+    flex-direction: row;
+}
+
+.column{
+    display: flex;
+    flex-direction: column;
+}
 /* --------------------------------------- */
 
 nav {
@@ -268,10 +277,11 @@ flex-grow: 0;
 }
 
 .s5 .imgG{
-    width:588px;
+    width:688px;
     height:420px;
     border-radius: 2em;
     margin: 1em;
+    margin-left: 10em;
     padding: 1em;
     padding-left: 1,5em;
     padding-right: 1,5em;
@@ -285,9 +295,10 @@ flex-direction: row;
 justify-content: center;
 align-items: center;
 padding: 0px;
+color: #6B7280;
 
 width: auto;
-height: 552px;
+height: 652px;
 
 /* Taupe */
 background: #E3DED7;
@@ -297,6 +308,10 @@ flex: none;
 order: 6;
 align-self: stretch;
 flex-grow: 0;
+}
+
+.s6 h4{
+    color: black;
 }
 
 .s6 .d1{
@@ -312,16 +327,132 @@ margin-right: 5em;
 }
 
 .s6 .d2{
-    width: 688px;
-    height: 552px;
+    width: 888px;
+    height: 652px;
     background-color: white;
+    color: black;
     margin: 1em;
-    padding: 1em;
-    padding-left: 1,5em;
-    padding-right: 1,5em;
+    padding: 32px 32px 32px 48px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .s6 input{
+    height: 10%;
     width: 80%;
     border-radius: 10px;
+    margin-bottom: 15px; 
+    border: 1px solid #D1D5DB;
+}
+
+
+ .s6 .grande{
+    height: 30%;
+} 
+
+.s6 textarea::placeholder {
+                 
+    /* Firefox, Chrome, Opera */
+    text-align: start;
+}
+
+.s6 .pequeno{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.s6 .buttonBig{
+
+    margin-top: 10px;
+    height: 12%;
+    width: 20%;
+}
+
+/* --------------------------------------- */
+
+.s7{
+/* s7 */
+width: auto;
+height: 410px;
+
+/* Black */
+background: #1F1815;
+
+display: flex;
+justify-content: space-between;
+color: white;
+
+padding-left: 3%;
+}
+
+.s7 >div{
+display: flex;
+flex-direction: column;
+/* justify-content: center; */
+align-items: left;
+margin-top: 2%;
+}
+
+.s7 .margin{
+    margin-top: 5%;  
+    margin-right: 20%;
+    flex-direction: row;
+    width: 700px;
+}
+
+.s7 .espacio {
+    width: 30%;
+}
+
+
+.s7 >div *{
+    margin-top: 10px;
+    font-size: larger;
+}
+
+.s7 span{
+    /* padding-top: 5px; */
+    font-size: 18px;
+}
+
+.s7 .h4{
+    font-size: x-large;
+}
+
+.s7 .top{
+    padding-bottom: 16px;
+}
+
+.s7 .left{
+    padding-right: 10px;
+    padding-bottom: 5px;
+}
+
+.s7 button{
+    padding: 10px;
+    margin: 10px;
+    margin-left: 0;
+}
+
+/* --------------------------------------- */
+
+footer{
+width: auto;
+height: 60px;
+
+/* Dark grey */
+background: #2B2A2B;
+color: white;
+
+display: flex;
+justify-content: center;
+}
+
+footer>div{
+    padding-top: 15px;
+    font-size: 18px;
 }
