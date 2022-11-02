@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="http://www.google.com/s2/favicons?domain=www.google.com">
+  <title>Index</title>
+  <!-- <link rel="stylesheet" type="text/css" href="style.css" /> -->
+  <!-- <script src="../../jquery-3.6.1.js"></script> -->
+  <script>
+
+    let node = document.createElement("img");
+
+    function pelicula(value) {
+      node.setAttribute("width", "200");
+      node.setAttribute("height", "200");
+
+      switch (value) {
+        case '1':
+          node.setAttribute("src", '../../Images/black_adam.jpg');
+          break;
+        case '2':
+          node.setAttribute("src", '../../Images/men.jpg');
+          break;
+        case '3':
+          node.setAttribute("src", '../../Images/mar.jpg');
+          break;
+        case '4':
+          node.setAttribute("src", '../../Images/smile.jpg');
+          break;
+      }
+      document.getElementById("img").appendChild(node);
+    }
+
+  </script>
+</head>
+
+<body>
+
+  <select name="Peliculas" id="Peliculas" size="4" onchange="pelicula(value)">
+    <option value="1">Black Adam</option>
+    <option value="2">Men</option>
+    <option value="3">Mar</option>
+    <option value="4">Smile</option>
+  </select>
+
+  <div id="img">
+    <br><br>
+  </div>
+
+  <!-- <script src="script.js"></script> -->
+</body>
+
+</html>
