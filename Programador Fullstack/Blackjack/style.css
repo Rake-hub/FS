@@ -1,0 +1,13 @@
+ body{
+    /* background:url("images/cards-g284c64dd0_1920.jpg") ; */
+    background-color: rgb(16, 63, 22);
+    color: white;
+    margin-left: 2%;
+    margin-top: 1%;
+} 
+
+img{
+    width: 60px;
+    height: 100px;
+    margin: 5px;
+}

@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="icon" type="image/x-icon" href="http://www.google.com/s2/favicons?domain=www.pokerstars.es">
+  <title>Blackjack</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <!-- <script src="../../jquery-3.6.1.js"></script> -->
+</head>
+
+<body>
+  
+  <h1>¡Blackjack!</h1>
+  <br>
+  <h2>Mano:</h2>
+  <br>
+  <div>
+  <img src="images/dorso.png" alt="" id="1-C" data-value="1">
+  <img src="images/dorso.png" alt="" id="2-C" data-value="2">
+  <img src="images/dorso.png" alt="" id="3-C" data-value="3">
+  <img src="images/dorso.png" alt="" id="4-C" data-value="4">
+  <img src="images/dorso.png" alt="" id="5-C" data-value="5">
+  <img src="images/dorso.png" alt="" id="6-C" data-value="6">
+  <img src="images/dorso.png" alt="" id="7-C" data-value="7">
+  <img src="images/dorso.png" alt="" id="8-C" data-value="8">
+  <img src="images/dorso.png" alt="" id="9-C" data-value="9">
+  <img src="images/dorso.png" alt="" id="10-C" data-value="10">
+  <img src="images/dorso.png" alt="" id="11-C" data-value="11">
+  <img src="images/dorso.png" alt="" id="12-C" data-value="12">
+  <img src="images/dorso.png" alt="" id="13-C" data-value="13">
+  </div>
+
+  <div>
+    <img src="images/dorso.png" alt="" id="1-D" data-value="1">
+    <img src="images/dorso.png" alt="" id="2-D" data-value="2">
+    <img src="images/dorso.png" alt="" id="3-D" data-value="3">
+    <img src="images/dorso.png" alt="" id="4-D" data-value="4">
+    <img src="images/dorso.png" alt="" id="5-D" data-value="5">
+    <img src="images/dorso.png" alt="" id="6-D" data-value="6">
+    <img src="images/dorso.png" alt="" id="7-D" data-value="7">
+    <img src="images/dorso.png" alt="" id="8-D" data-value="8">
+    <img src="images/dorso.png" alt="" id="9-D" data-value="9">
+    <img src="images/dorso.png" alt="" id="10-D" data-value="10">
+    <img src="images/dorso.png" alt="" id="11-D" data-value="11">
+    <img src="images/dorso.png" alt="" id="12-D" data-value="12">
+    <img src="images/dorso.png" alt="" id="13-D" data-value="13">
+    </div>
+
+    <div>
+      <img src="images/dorso.png" alt="" id="1-H" data-value="1">
+      <img src="images/dorso.png" alt="" id="2-H" data-value="2">
+      <img src="images/dorso.png" alt="" id="3-H" data-value="3">
+      <img src="images/dorso.png" alt="" id="4-H" data-value="4">
+      <img src="images/dorso.png" alt="" id="5-H" data-value="5">
+      <img src="images/dorso.png" alt="" id="6-H" data-value="6">
+      <img src="images/dorso.png" alt="" id="7-H" data-value="7">
+      <img src="images/dorso.png" alt="" id="8-H" data-value="8">
+      <img src="images/dorso.png" alt="" id="9-H" data-value="9">
+      <img src="images/dorso.png" alt="" id="10-H" data-value="10">
+      <img src="images/dorso.png" alt="" id="11-H" data-value="11">
+      <img src="images/dorso.png" alt="" id="12-H" data-value="12">
+      <img src="images/dorso.png" alt="" id="13-H" data-value="13">
+      </div>
+
+      <div>
+        <img src="images/dorso.png" alt="" id="1-S" data-value="1">
+        <img src="images/dorso.png" alt="" id="2-S" data-value="2">
+        <img src="images/dorso.png" alt="" id="3-S" data-value="3">
+        <img src="images/dorso.png" alt="" id="4-S" data-value="4">
+        <img src="images/dorso.png" alt="" id="5-S" data-value="5">
+        <img src="images/dorso.png" alt="" id="6-S" data-value="6">
+        <img src="images/dorso.png" alt="" id="7-S" data-value="7">
+        <img src="images/dorso.png" alt="" id="8-S" data-value="8">
+        <img src="images/dorso.png" alt="" id="9-S" data-value="9">
+        <img src="images/dorso.png" alt="" id="10-S" data-value="10">
+        <img src="images/dorso.png" alt="" id="11-S" data-value="11">
+        <img src="images/dorso.png" alt="" id="12-S" data-value="12">
+        <img src="images/dorso.png" alt="" id="13-S" data-value="13">
+      </div>
+
+  <br>
+  <div>
+  <button type="button" class="btn btn-dark" onclick="jugar()" id="jugar">Jugar</button>
+  <button type="button" class="btn btn-dark" onclick="continuar()" id="continuar">Continuar</button>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <button type="button" class="btn btn-dark" onclick="dorso2()">Reiniciar</button>
+  <!-- <button type="button" class="btn btn-dark" onclick="cara()">Cara</button> -->
+  </div>
+  <br>
+  <div>
+  <strong>Mano:</strong>  <input type="text" class="input1">
+  </div>
+
+
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+    crossorigin="anonymous"></script> 
+  <script src="script2.js"></script>
+</body>
+
+</html>
