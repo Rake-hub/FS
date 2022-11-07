@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link rel="icon" type="image/x-icon" href="http://www.google.com/s2/favicons?domain=www.google.com"> -->
+  <title>Hola Mundo con AJAX</title>
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous"> -->
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <!-- <script src="../../jquery-3.6.1.js"></script> -->
+
+  <script>
+    "use strict mode"
+     //function enviar() { document.forms[0].submit(); }
+
+    function descargarImagen() {
+      let escudos = document.getElementById("miform").value;
+      //Obtener la instancia del objeto XMLHttpRequest
+      if (window.XMLHttpRequest)
+        peticion_http = new XMLHttpRequest();
+      else if (window.ActiveXObject)
+        peticion_http = new ActiveXObject("Microsoft.XMLHTTP");
+
+
+      //Preparar la function de respuesta
+      peticion_http.onreadystatechange = muestraContenido;
+
+      //Realizar peticion HTTP
+      peticion_http.open('GET', 'http://localhost/Programador%20Fullstack/AJAX/ejercicio25_Futbol/escudos.php?escudos=' + escudos, true);
+      peticion_http.send(null);
+
+      function muestraContenido() {
+        if (peticion_http.readyState == 4) {
+          if (peticion_http.status == 200) {
+            document.getElementById("img").innerHTML=peticion_http.responseText;
+          }
+        }
+      }
+
+    }
+  </script>
+</head>
+
+<body>
+
+  <form method="GET" action="escudos.php" name="formulario">
+    <select name="escudos" onchange="descargarImagen()" id="miform">
+      <option value="rmadrid">Real Madrid</option>
+      <option value="atmadrid">Atletico de Madrid</option>
+      <option value="barça">Barça</option>
+      <option value="valencia">Valencia F.C</option>
+    </select>
+  </form>
+
+  <div id="img"></div>
+
+
+  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+    crossorigin="anonymous"></script> -->
+  <script src="script.js"></script>
+</body>
+
+</html>
