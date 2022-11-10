@@ -11,16 +11,29 @@
   <link rel="stylesheet" type="text/css" href="style.css" />
   <!-- <script src="../../jquery-3.6.1.js"></script> -->
   <script>
+    function pintaMapa(){
+      let object={'mapa':'../../Images/Madrid.jpg'};
+
+      localStorage.setItem('key', JSON.stringify(object));
+      let objmapa=JSON.parse(localStorage.getItem('key'));
+
+      node=document.createElement("input");
+      node.setAttribute('src', objmapa.mapa);
+      node.setAttribute('type','image');
+      node.setAttribute('name','mapa');
+      document.getElementById("madrid").appendChild(node);
+    }
   </script>
 </head>
 
-<body>
+<body onload="pintaMapa()">
   <center>
-    <form  name="madrid" action="mapa.php">
-    <input type="image" src="../../Images/Madrid.jpg" alt="" name="mapa">
-  </form>
+    <form name="madrid" id="madrid" action="mapa.php">
+      <!-- <input type="image" src="../../Images/Madrid.jpg" alt="" name="mapa" onclick="mostrarImagen()" id="mapa_madrid"> -->
+    </form>
   </center>
-  
+
+<script src="script.js"></script>
 </body>
 
 </html>

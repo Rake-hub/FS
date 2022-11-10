@@ -1,21 +1,46 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
+$x=$_GET['mapa_x'];
+$y=$_GET['mapa_y'];
+
+echo("X:".$x." ");
+echo("Y:".$y);
+?>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <style>
+        form{
+            position: absolute;
+            top:20px;
+            left:800px;
+        }
+    </style>
+
+<script>
+function mostrar(){
+        let node=document.createElement("img");
+        node.setAttribute('src', '../../Images/Madrid.jpg');
+        node.setAttribute('style','position:absolute;top:20px;left:0px');
+        document.getElementById("madrid").appendChild(node);
+    }
+</script>
 </head>
-<body>
-    <?php
-    $x=$_GET['mapa_x'];
-    $y=$_GET['mapa_y'];
 
-    echo("X: ".$x." ");
-    echo("Y: ".$y);
-
-    ?>
-
+ <body>
     <h1>CASAS</h1>
-</body>
-</html>
+    <?php 
+    echo('<input type="text" id="cajaX" value="'.$x.'">');
+    echo('<input type="text" id="cajaY" value="'.$y.'">');
+    ?>
+    <!-- controles -->
+    <button onclick="mostrar()">Click</button>
+    <div id="madrid"></div>
+
+    <form action="">
+        <select name="" id="">
+            <option value="">Casa</option>
+        </select>
+        <br><br>
+        <textarea name="" id="" cols="30" rows="3"></textarea>
+        <br><br>
+        <button>Mostrar</button>
+    </form>
+</body> 
