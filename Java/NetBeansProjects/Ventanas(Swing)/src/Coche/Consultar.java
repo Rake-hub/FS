@@ -76,8 +76,8 @@ public class Consultar extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(28, 28, 28)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 232, Short.MAX_VALUE)
-                .addGap(113, 113, 113))
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 193, Short.MAX_VALUE)
+                .addGap(48, 48, 48))
         );
 
         pack();
@@ -95,10 +95,10 @@ public class Consultar extends javax.swing.JFrame {
 
         DefaultTableModel model = new DefaultTableModel();
 
-        model.addColumn("Matrícula");
-        model.addColumn("Marca");
-        model.addColumn("Modelo");
-        model.addColumn("Motor");
+        model.addColumn("MATRÍCULA");
+        model.addColumn("MARCA");
+        model.addColumn("MODELO");
+        model.addColumn("MOTOR");
 
         try {
         for (int i = 0; i < coches.size(); i++) {

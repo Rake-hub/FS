@@ -66,6 +66,7 @@ public class Alta extends javax.swing.JFrame {
         jTextField2 = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        jButton3 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
@@ -80,6 +81,8 @@ public class Alta extends javax.swing.JFrame {
         jLabel2.setText("Modelo:");
 
         jLabel3.setText("Motor:");
+
+        jButton3.setText("jButton3");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         addWindowListener(new java.awt.event.WindowAdapter() {
@@ -218,7 +221,7 @@ public class Alta extends javax.swing.JFrame {
         ObjectOutputStream oos;
 
         try {
-            fos = new FileOutputStream("coches.txt");
+            fos = new FileOutputStream("coches.dat");
             oos = new ObjectOutputStream(fos);
             oos.writeObject(coches);
             JOptionPane.showMessageDialog(this, "ArrayList guardado");
@@ -268,6 +271,7 @@ public class Alta extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

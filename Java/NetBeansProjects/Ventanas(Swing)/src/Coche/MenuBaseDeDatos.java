@@ -1,6 +1,5 @@
 package Coche;
 
-
 import java.awt.BorderLayout;
 import java.awt.Button;
 import java.awt.Color;
@@ -31,7 +30,7 @@ import javax.swing.JTextField;
  * and open the template in the editor.
  */
 
-/*
+ /*
 public interface WindowListener{
     public void WindowOpened(WindowEvent e);
     public void WindowOClosed(WindowEvent e);
@@ -41,9 +40,7 @@ public interface WindowListener{
     public void WindowIconified(WindowEvent e);
     public void WindowDeiconified(WindowEvent e);
 }
-*/
-
-
+ */
 /**
  *
  * @author tarde
@@ -145,17 +142,43 @@ public class MenuBaseDeDatos extends JFrame implements ActionListener {
         estado.setText("Estado: ");
 
         if (e.getSource() == m11) {
-            estado.setText(estado.getText() + "Pulsado...");
+            estado.setText(estado.getText() + "Cargando...");
         }
+        if (e.getSource() == m12) {
+            new Conectar().setVisible(true);
+        }
+        if (e.getSource() == m13) {
+        }
+        if (e.getSource() == m14) {
+            this.dispose();
+        }
+        //-------------------------------------------------------------
 
         if (e.getSource() == m21) {
             new Alta().setVisible(true);
         }
-        
-                if (e.getSource() == m24) {
+
+        if (e.getSource() == m22) {
+            new Baja().setVisible(true);
+        }
+
+        if (e.getSource() == m23) {
+            new Modificar().setVisible(true);
+        }
+
+        if (e.getSource() == m24) {
             new Consultar().setVisible(true);
         }
 
+        //-------------------------------------------------------------
+        if (e.getSource() == m31) {
+        }
+
+        //-------------------------------------------------------------
+        if (e.getSource() == m41) {
+        }
+        if (e.getSource() == m42) {
+        }
     }
 
 }
