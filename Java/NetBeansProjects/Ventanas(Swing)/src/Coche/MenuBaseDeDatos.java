@@ -1,5 +1,6 @@
 package Coche;
 
+import DB.BaseDatosRef;
 import java.awt.BorderLayout;
 import java.awt.Button;
 import java.awt.Color;
@@ -19,6 +20,11 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -59,6 +65,8 @@ public class MenuBaseDeDatos extends JFrame implements ActionListener {
 
     Label estado;
     TextArea ta;
+
+    static Connection con = null;
 
     public MenuBaseDeDatos() {
         this.setTitle("Base de Datos");
@@ -142,12 +150,36 @@ public class MenuBaseDeDatos extends JFrame implements ActionListener {
         estado.setText("Estado: ");
 
         if (e.getSource() == m11) {
-            estado.setText(estado.getText() + "Cargando...");
+            estado.setText(estado.getText() + "Driver cargado");
+
+            try {
+                Class.forName("com.mysql.jdbc.Driver");
+                System.out.println("Driver cargado");
+            } catch (ClassNotFoundException ex) {
+                Logger.getLogger(BaseDatosRef.class.getName()).log(Level.SEVERE, null, ex);
+            }
         }
+        
         if (e.getSource() == m12) {
-            new Conectar().setVisible(true);
+            //2 conectar
+            try {
+                con = DriverManager.getConnection("jdbc:mysql://localhost/almacen", "root", "");
+                System.out.println("Conectados a Almacen");
+                estado.setText(estado.getText() + "Conectados a Almacen");
+            } catch (SQLException ex) {
+                Logger.getLogger(BaseDatosRef.class.getName()).log(Level.SEVERE, null, ex);
+            }
         }
+        
         if (e.getSource() == m13) {
+            //3 desconectar
+            try {
+            con.close();
+            System.out.println("Desonectados de Almacen");
+            estado.setText(estado.getText() + "Desconectados de Almacen");
+        } catch (SQLException ex) {
+            Logger.getLogger(BaseDatosRef.class.getName()).log(Level.SEVERE, null, ex);
+        }
         }
         if (e.getSource() == m14) {
             this.dispose();
