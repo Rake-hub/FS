@@ -8,6 +8,8 @@ package DB;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.sql.*;
+import javax.swing.UIManager;
+import javax.swing.UnsupportedLookAndFeelException;
 
 /**
  *
@@ -18,6 +20,12 @@ public class BaseDatosRef {
     static Statement st=null; //Representa una sentencia SQL
     
     public static void main(String[] args) {
+        
+        try {
+            UIManager.setLookAndFeel("com.jtattoo.plaf.luna.LunaLookAndFeel");
+        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | UnsupportedLookAndFeelException ex) {
+            Logger.getLogger(BaseDatosRef.class.getName()).log(Level.SEVERE, null, ex);
+        }
         
             //1 cargar driver
         try {
@@ -37,6 +45,7 @@ public class BaseDatosRef {
         }
             
             
+            /*
              String sql="insert into productos values('090-J','Cafetera termica',33,2.34);";
              
         try {
@@ -51,15 +60,30 @@ public class BaseDatosRef {
             }else if(n>1) System.out.println("Registros borrados");
         } catch (SQLException ex) {
             Logger.getLogger(BaseDatosRef.class.getName()).log(Level.SEVERE, null, ex);
+        }*/
+        
+        
+        //Mostrar tabla
+        ResultSet rs=null;
+        try {
+            String sql="select * from productos";
+            st=con.createStatement();
+            rs=st.executeQuery(sql);
+            while(rs.next()){
+                System.out.println(rs.getString(1)+"\t"+rs.getString(2)+"\t"+rs.getString(3)+"\t"+rs.getString(4)+"\t");
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(BaseDatosRef.class.getName()).log(Level.SEVERE, null, ex);
         }
         
+ /*
             //3 desconectar
             try {
             con.close();
             System.out.println("Desonectados de Almacen");
         } catch (SQLException ex) {
             Logger.getLogger(BaseDatosRef.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        }*/
             
             
            

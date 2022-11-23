@@ -29,6 +29,8 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+import javax.swing.UIManager;
+import javax.swing.UnsupportedLookAndFeelException;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -55,7 +57,7 @@ public class MenuBaseDeDatos extends JFrame implements ActionListener {
 
     MenuBar mbarra;
     Menu m1;
-    MenuItem m11, m12, m13, m14;
+    static MenuItem m11, m12, m13, m14;
     Menu m2;
     MenuItem m21, m22, m23, m24;
     Menu m3;
@@ -67,6 +69,8 @@ public class MenuBaseDeDatos extends JFrame implements ActionListener {
     TextArea ta;
 
     static Connection con = null;
+    
+
 
     public MenuBaseDeDatos() {
         this.setTitle("Base de Datos");
@@ -143,11 +147,21 @@ public class MenuBaseDeDatos extends JFrame implements ActionListener {
     }
 
     public static void main(String[] args) {
+
         new MenuBaseDeDatos();
+        m12.setEnabled(false);   
+        m13.setEnabled(false);
+        
+                try {
+            UIManager.setLookAndFeel("com.jtattoo.plaf.acryl.AcrylLookAndFeel");
+        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | UnsupportedLookAndFeelException ex) {
+            Logger.getLogger(BaseDatosRef.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     public void actionPerformed(ActionEvent e) {
         estado.setText("Estado: ");
+           
 
         if (e.getSource() == m11) {
             estado.setText(estado.getText() + "Driver cargado");
@@ -155,6 +169,7 @@ public class MenuBaseDeDatos extends JFrame implements ActionListener {
             try {
                 Class.forName("com.mysql.jdbc.Driver");
                 System.out.println("Driver cargado");
+                m12.setEnabled(true);
             } catch (ClassNotFoundException ex) {
                 Logger.getLogger(BaseDatosRef.class.getName()).log(Level.SEVERE, null, ex);
             }
@@ -163,9 +178,11 @@ public class MenuBaseDeDatos extends JFrame implements ActionListener {
         if (e.getSource() == m12) {
             //2 conectar
             try {
+                new Conectar().setVisible(true);
                 con = DriverManager.getConnection("jdbc:mysql://localhost/almacen", "root", "");
                 System.out.println("Conectados a Almacen");
                 estado.setText(estado.getText() + "Conectados a Almacen");
+                m13.setEnabled(true);
             } catch (SQLException ex) {
                 Logger.getLogger(BaseDatosRef.class.getName()).log(Level.SEVERE, null, ex);
             }
