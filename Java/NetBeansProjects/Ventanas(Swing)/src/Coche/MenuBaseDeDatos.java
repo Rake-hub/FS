@@ -221,6 +221,7 @@ public class MenuBaseDeDatos extends JFrame implements ActionListener {
 
         //-------------------------------------------------------------
         if (e.getSource() == m31) {
+            new Buscador().setVisible(true);
         }
 
         //-------------------------------------------------------------

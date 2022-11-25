@@ -16,36 +16,35 @@ import javax.swing.UnsupportedLookAndFeelException;
  * @author tarde
  */
 public class BaseDatosRef {
-    static Connection con=null;
-    static Statement st=null; //Representa una sentencia SQL
-    
+
+    static Connection con = null;
+    static Statement st = null; //Representa una sentencia SQL
+
     public static void main(String[] args) {
-        
+
         try {
             UIManager.setLookAndFeel("com.jtattoo.plaf.luna.LunaLookAndFeel");
         } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | UnsupportedLookAndFeelException ex) {
             Logger.getLogger(BaseDatosRef.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
-            //1 cargar driver
+
+        //1 cargar driver
         try {
             Class.forName("com.mysql.jdbc.Driver");
             System.out.println("Driver cargado");
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(BaseDatosRef.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
-        
-            //2 conectar
-            try {
-            con=DriverManager.getConnection("jdbc:mysql://localhost/almacen","root","");
+
+        //2 conectar
+        try {
+            con = DriverManager.getConnection("jdbc:mysql://localhost/almacen", "root", "");
             System.out.println("Conectados a Almacen");
         } catch (SQLException ex) {
             Logger.getLogger(BaseDatosRef.class.getName()).log(Level.SEVERE, null, ex);
         }
-            
-            
-            /*
+
+        /*
              String sql="insert into productos values('090-J','Cafetera termica',33,2.34);";
              
         try {
@@ -61,22 +60,35 @@ public class BaseDatosRef {
         } catch (SQLException ex) {
             Logger.getLogger(BaseDatosRef.class.getName()).log(Level.SEVERE, null, ex);
         }*/
-        
-        
-        //Mostrar tabla
-        ResultSet rs=null;
+        //Sentencia precompilada
+        PreparedStatement pst;
         try {
-            String sql="select * from productos";
-            st=con.createStatement();
-            rs=st.executeQuery(sql);
-            while(rs.next()){
-                System.out.println(rs.getString(1)+"\t"+rs.getString(2)+"\t"+rs.getString(3)+"\t"+rs.getString(4)+"\t");
+            String sql = "insert into productos values(?,?,?,?)";
+            pst = con.prepareStatement(sql);
+            pst.setString(1, "000-Z");
+            pst.setString(2, "Cámara fotográfica");
+            pst.setInt(3, 44);
+            pst.setFloat(4, 235.78F);
+            
+            pst.executeUpdate();
+        } catch (SQLException ex) {
+            Logger.getLogger(BaseDatosRef.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        //Mostrar tabla
+        ResultSet rs = null;
+        try {
+            String sql = "select * from productos";
+            st = con.createStatement();
+            rs = st.executeQuery(sql);
+            while (rs.next()) {
+                System.out.println(rs.getString(1) + "\t" + rs.getString(2) + "\t" + rs.getString(3) + "\t" + rs.getString(4) + "\t");
             }
         } catch (SQLException ex) {
             Logger.getLogger(BaseDatosRef.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
- /*
+
+        /*
             //3 desconectar
             try {
             con.close();
@@ -84,11 +96,6 @@ public class BaseDatosRef {
         } catch (SQLException ex) {
             Logger.getLogger(BaseDatosRef.class.getName()).log(Level.SEVERE, null, ex);
         }*/
-            
-            
-           
-        
-        
     }
-    
+
 }
