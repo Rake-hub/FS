@@ -44,10 +44,11 @@ public class BaseDatosRef {
             Logger.getLogger(BaseDatosRef.class.getName()).log(Level.SEVERE, null, ex);
         }
 
-        /*
-             String sql="insert into productos values('090-J','Cafetera termica',33,2.34);";
-             
         try {
+            /*
+            String sql="insert into productos values('090-J','Cafetera termica',33,2.34);";
+            
+            try {
             st=con.createStatement();
             int n=st.executeUpdate(sql);
             //n-->-1  afecta a toda la tabla
@@ -55,12 +56,19 @@ public class BaseDatosRef {
             //n-->num num de reg afectados
             
             if(n==1){
-                System.out.println("Registro insertado");
+            System.out.println("Registro insertado");
             }else if(n>1) System.out.println("Registros borrados");
+            } catch (SQLException ex) {
+            Logger.getLogger(BaseDatosRef.class.getName()).log(Level.SEVERE, null, ex);
+            }*/
+            //Sentencia precompilada
+
+            //TRANSACCION
+            con.setAutoCommit(false);
         } catch (SQLException ex) {
             Logger.getLogger(BaseDatosRef.class.getName()).log(Level.SEVERE, null, ex);
-        }*/
-        //Sentencia precompilada
+        }
+
         PreparedStatement pst;
         try {
             String sql = "insert into productos values(?,?,?,?)";
@@ -69,10 +77,13 @@ public class BaseDatosRef {
             pst.setString(2, "Cámara fotográfica");
             pst.setInt(3, 44);
             pst.setFloat(4, 235.78F);
-            
+
             pst.executeUpdate();
+
+            con.commit();
+            System.out.println("Nivel de aislamiento: "+con.getTransactionIsolation());
         } catch (SQLException ex) {
-            Logger.getLogger(BaseDatosRef.class.getName()).log(Level.SEVERE, null, ex);
+            System.out.println("Ya existe la cmamara fotografica");
         }
 
         //Mostrar tabla
