@@ -5,6 +5,7 @@
  */
 package hospital;
 
+import java.awt.FlowLayout;
 import javax.swing.JPanel;
 
 /**
@@ -16,11 +17,21 @@ public class Menu_principal extends javax.swing.JFrame {
     /**
      * Creates new form Menu_principal
      */
+    JPanel Comprobar_citas = new Comprobar_citas();
     JPanel Crear_cita = new Crear_cita();
     JPanel Borrar_cita = new Borrar_cita();
+    
+    JPanel Pacientes_lista = new Pacientes_lista();
+    JPanel Pacientes_alta = new Pacientes_alta();
+    JPanel Pacientes_baja = new Pacientes_baja();
 
     public Menu_principal() {
         initComponents();
+        this.setSize(500,500);
+        
+        Comprobar_citas.setVisible(false);
+        Comprobar_citas.setSize(450, 300);
+        this.getContentPane().add(Comprobar_citas,FlowLayout.LEFT);
 
         Crear_cita.setVisible(false);
         Crear_cita.setSize(350, 300);
@@ -29,7 +40,32 @@ public class Menu_principal extends javax.swing.JFrame {
         Borrar_cita.setVisible(false);
         Borrar_cita.setSize(350, 300);
         this.getContentPane().add(Borrar_cita);
+        
+        //---------------------------------------------------------------------------------------------------------------
+        
+        Pacientes_lista.setVisible(false);
+        Pacientes_lista.setSize(490, 300);
+        this.getContentPane().add(Pacientes_lista);
 
+        Pacientes_alta.setVisible(false);
+        Pacientes_alta.setSize(450, 400);
+        this.getContentPane().add(Pacientes_alta);
+
+        Pacientes_baja.setVisible(false);
+        Pacientes_baja.setSize(350, 300);
+        this.getContentPane().add(Pacientes_baja);
+
+    }
+    
+    public void repaint(){
+    
+        Comprobar_citas.setVisible(false);
+        Crear_cita.setVisible(false);
+        Borrar_cita.setVisible(false);
+        
+        Pacientes_lista.setVisible(false);
+        Pacientes_alta.setVisible(false);
+        Pacientes_baja.setVisible(false);
     }
 
     /**
@@ -63,6 +99,11 @@ public class Menu_principal extends javax.swing.JFrame {
         jMenu3.setText("Citas");
 
         jMenuItem9.setText("Comprobar citas");
+        jMenuItem9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem9ActionPerformed(evt);
+            }
+        });
         jMenu3.add(jMenuItem9);
         jMenu3.add(jSeparator3);
 
@@ -87,13 +128,28 @@ public class Menu_principal extends javax.swing.JFrame {
         jMenu1.setText("Pacientes");
 
         jMenuItem6.setText("Lista");
+        jMenuItem6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem6ActionPerformed(evt);
+            }
+        });
         jMenu1.add(jMenuItem6);
         jMenu1.add(jSeparator2);
 
         jMenuItem7.setText("Alta");
+        jMenuItem7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem7ActionPerformed(evt);
+            }
+        });
         jMenu1.add(jMenuItem7);
 
         jMenuItem8.setText("Baja");
+        jMenuItem8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem8ActionPerformed(evt);
+            }
+        });
         jMenu1.add(jMenuItem8);
 
         jMenuBar1.add(jMenu1);
@@ -150,14 +206,40 @@ public class Menu_principal extends javax.swing.JFrame {
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
         // TODO add your handling code here:
         //Crear cita
+        repaint();
         Crear_cita.setVisible(true);
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
         // TODO add your handling code here:
-        Crear_cita.setVisible(false);
+        repaint();
         Borrar_cita.setVisible(true);
     }//GEN-LAST:event_jMenuItem2ActionPerformed
+
+    private void jMenuItem9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem9ActionPerformed
+        // TODO add your handling code here:
+        //Comprobar cita
+        repaint();
+        Comprobar_citas.setVisible(true); 
+    }//GEN-LAST:event_jMenuItem9ActionPerformed
+
+    private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
+        // TODO add your handling code here:
+        repaint();
+        Pacientes_lista.setVisible(true);
+    }//GEN-LAST:event_jMenuItem6ActionPerformed
+
+    private void jMenuItem7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem7ActionPerformed
+        // TODO add your handling code here:
+        repaint();
+        Pacientes_alta.setVisible(true);
+    }//GEN-LAST:event_jMenuItem7ActionPerformed
+
+    private void jMenuItem8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem8ActionPerformed
+        // TODO add your handling code here:
+                repaint();
+        Pacientes_baja.setVisible(true);
+    }//GEN-LAST:event_jMenuItem8ActionPerformed
 
     /**
      * @param args the command line arguments
