@@ -1,0 +1,29 @@
+CONSTRUCCIONES JSP
+
+1. PLANTILLAS HTML
+
+2. ELEMENTOS DE SCRIPT
+
+	a. SCRIPTLETS
+		<% int x=4; %>
+
+	b. EXPRESIONES
+		<%= variable %> No lleva ; y siempre va dentro del HTML
+
+	c. DECLARACIONES
+		<%! int x; %>
+
+3. DIRECTIVAS
+	<%@ include file="url relativa" %>
+
+4. ACCIONES
+
+------------------------------------------------------------------------------------------------------------------------------------------
+
+Objetos implícitos de JSP		   	
+
+	response
+	request request.getParameter("dni")
+	out
+	session
+	application
