@@ -1,0 +1,28 @@
+   FileInputStream fis;
+        ObjectInputStream ois;
+
+        try {
+            fis = new FileInputStream("coches.dat");
+            ois = new ObjectInputStream(fis);
+
+            coches = (ArrayList) ois.readObject();
+            JOptionPane.showMessageDialog(this, "ArrayList leido");
+
+        } catch (IOException ioe) {
+            System.out.println("No se pudo leer el fichero" + ioe.getMessage());
+        } catch (ClassNotFoundException cne) {
+            System.out.println("No se encontró la clase");
+        }
+
+        DefaultTableModel model = new DefaultTableModel();
+
+        model.addColumn("MATRICULA");
+        model.addColumn("MARCA");
+        model.addColumn("MODELO");
+        model.addColumn("MOTOR");
+
+        for (int i = 0; i < coches.size(); ++i) {
+            model.addRow(new Object[]{coches.get(i).getMatricula(), coches.get(i).getMarca(), coches.get(i).getModelo(), coches.get(i).getMotor(),});
+        }
+
+        jTable1.setModel(model);

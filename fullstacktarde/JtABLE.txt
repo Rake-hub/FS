@@ -1,0 +1,15 @@
+ DefaultTableModel model = new DefaultTableModel();
+       
+        model.addColumn("Código");
+        model.addColumn("Producto");
+        model.addColumn("Precio");
+
+
+        model.addRow(new Object[]{"1","Computadora","$ 5000"});
+        model.addRow(new Object[]{"2","Computadora","$ 7000"});
+        model.addRow(new Object[]{"3","Computadora","$ 4000"});
+        model.addRow(new Object[]{"4","Computadora","$ 1000"});
+        model.addRow(new Object[]{"5","Computadora","$ 500"});
+        model.addRow(new Object[]{"6","Computadora","$ 2000"});
+        
+        jTable1.setModel(model);
