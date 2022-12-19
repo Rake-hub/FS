@@ -1,0 +1,36 @@
+PASOS PARA EL CORRECTO FUNCIONAMIENTO DEL SISTEMA DE QUEJAS:
+
+1.- ENTRAS EN LA CARPETA archivos_configuracion
+
+-------------------CONFIGURACION BASE DE DATOS-------------------------------
+
+2.- CREAR BASE DE DATOS EN LOCALHOST CON EL NOMBRE DE sistema_de_quejas
+3.- IMPORTAR BASE DE DATOS sistema_de_quejas.sql que se encuentra en la carpeta archivos_configuracion.
+
+-------------------AGREGAR LIBRERIA AL XAMP AL TOMCAT------------------------------
+
+4.- INSTALAR XAMPP O TOMCAT
+5.- ENTRAR EN XAMPP/TOMCAT/LIB
+6.- COPIAR EL ARCHIVO DE mysql-connector-java-5.1.15-bin.jar de la carpeta archivos_configuracion 
+7.- PEGAR EL ARCHIVO EN LA CARPETA XAMPP/TOMCAT/LIB
+
+
+-------------------ARCHIVO XML CONFIGURACION------------------------------
+
+8.-EN LA CARPETA DE archivos_configuracion copiar el archivo web.xml
+9.- PEGAR EL ARCHIVO web.xml en la carpeta C:\xampp\tomcat\webapps\examples\WEB-INF\web.xml
+
+-------------------CONFIGURACION CARPETA sistema_quejas------------------------------
+10.-EN LA CARPETA DE archivos_configuracion copiar la carpeta sistema_quejas
+11.- PEGAR LA CARPETA EN C:\xampp\tomcat\webapps\ROOT
+
+-------------------CONFIGURACION DE ARCHIVOS .CLASS CON EL XAMPP ------------------------------
+12.- EN LA CARPETA SistemaQuejas , LA PRINCIPAL ENTRAR EN SistemaQuejas\build\classes
+13.- COPIAR TODOS LOS ARCHIVOS . class
+14.- PEGARLOS EN LA CARPETA C:\xampp\tomcat\webapps\examples\WEB-INF\classes
+
+-------------------EJECUCION DEL PROGRAMA ------------------------------
+15.- ABRIR XAMPP
+16.- EJECUTAR TOMCAT / APACHE Y MYSQL
+17.- ABRIR EL ARCHIVO HTML POR http://localhost:8080/sistema_quejas/sistema_quejas.html
+
